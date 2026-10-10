@@ -1,0 +1,525 @@
+احمد:
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>BIM A | بوابتك الذكية لنماذج الذكاء الاصطناعي</title>
+
+<!-- Google Fonts: Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = 
+theme: {
+extend: {
+fontFamily: {
+cairo: ['Cairo', 'sans-serif'],
+},
+colors: {
+brand: {
+dark: '#07090e',
+surface: '#0f1422',
+border: '#1f293d',
+cyan: '#06b6d4',
+primary: '#6366f1',
+purple: '#a855f7',
+}
+},
+animation: {
+'float': 'float 4s ease-in-out infinite',
+'float-delayed': 'float 4s ease-in-out 2s infinite',
+'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+},
+keyframes: {
+float: {
+'0%, 100%': { transform: 'translateY(0px)' },
+'50%': { transform: 'translateY(-10px)' },
+},
+pulseGlow: {
+'0%, 100%': { opacity: '0.4' },
+'50%': { opacity: '0.8' },
+}
+}
+}
+}
+}
+</script>
+
+<style>
+body {
+font-family: 'Cairo', sans-serif;
+background-color: #07090e;
+color: #f1f5f9;
+overflow-x: hidden;
+-webkit-tap-highlight-color: transparent;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+background: rgba(15, 20, 34, 0.75);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-interactive {
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-interactive:active {
+transform: scale(0.98);
+}
+
+/* Ambient Glow Effect */
+.ambient-glow {
+position: absolute;
+width: 320px;
+height: 320px;
+border-radius: 50%;
+filter: blur(100px);
+pointer-events: none;
+z-index: 0;
+}
+
+/* Animated Card Shine */
+.hologram-sheen {
+background: linear-gradient(
+135deg,
+rgba(255, 255, 255, 0.15) 0%,
+rgba(255, 255, 255, 0.03) 40%,
+rgba(99, 102, 241, 0.2) 60%,
+rgba(6, 182, 212, 0.3) 100%
+);
+}
+</style>
+</head>
+<body class="selection:bg-cyan-500 selection:text-white">
+
+<!-- Ambient Glowing Lights Background -->
+<div class="ambient-glow bg-cyan-600/20 top-0 right-[-100px]"></div>
+<div class="ambient-glow bg-indigo-600/20 top-[35%] left-[-120px]"></div>
+<div class="ambient-glow bg-purple-600/15 bottom-[10%] right-[-80px]"></div>
+
+<!-- Navigation Bar -->
+<header class="fixed top-0 inset-x-0 z-50 px-4 py-3">
+<nav class="max-w-md sm:max-w-2xl mx-auto glass-card rounded-2xl px-4 py-2.5 flex items-center justify-between border border-white/10 shadow-lg shadow-black/40">
+
+احمد:
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center shadow-md shadow-cyan-500/20">
+<svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-black tracking-wide text-white leading-tight">BIM <span class="text-cyan-400">AI</span></span>
+<span class="text-[10px] text-slate-400 font-medium">الجيل الذكي</span>
+</div>
+</div>
+
+<a href="#download" class="text-xs font-bold px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-sm hover:opacity-90 active:scale-95 transition-all">
+تحميل التطبيق
+</a>
+</nav>
+</header>
+
+<!-- Main Content Container (Mobile Optimized) -->
+<main class="relative z-10 pt-24 px-4 max-w-md sm:max-w-2xl mx-auto space-y-16 pb-20">
+
+<!-- HERO SECTION -->
+<section class="text-center pt-4 space-y-6">
+<!-- Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-[11px] text-cyan-300 shadow-inner">
+<span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>
+<span>كل نماذج الذكاء الاصطناعي برقم هاتفك فقط</span>
+</div>
+
+<!-- Title -->
+<h1 class="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white">
+ذكاء اصطناعي بلا حدود، <br>
+<span class="bg-gradient-to-r from-cyan-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+شحن فوري عبر الكروت
+</span>
+</h1>
+
+<p class="text-sm sm:text-base text-slate-300/90 leading-relaxed font-normal px-2">
+تطبيق جوال واحد يجمع لك GPT-4o و Claude و Gemini في مكان واحد. سجّل برقم جوالك، فعّل كاردك الخاص، واستمتع بتجربة فائقة السرعة.
+</p>
+
+<!-- Call to Actions -->
+<div class="flex flex-col sm:flex-row gap-3 pt-2">
+<a href="#download" class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold text-sm shadow-lg shadow-cyan-500/25 active:scale-95 transition-transform">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0003s.4482-1.0003.9993-1.0003c.552 0 1.0002.4486 1.0002 1.0003s-.4482 1.0003-1.0002 1.0003m-11.046 0c-.552 0-1.0002-.4486-1.0002-1.0003s.4482-1.0003 1.0002-1.0003c.5511 0 .9993.4486.9993 1.0003s-.4482 1.0003-.9993 1.0003m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1523-.5676.416.416 0 00-.5682.1523l-2.0223 3.503c-1.6373-.748-3.4776-1.1627-5.436-1.1627-1.9583 0-3.7986.4147-5.436 1.1627l-2.0222-3.503a.416.416 0 00-.5682-.1523.416.416 0 00-.1524.5676l1.9974 3.4592C4.388 11.2368 2 15.2285 2 19.8277h20c0-4.5992-2.388-8.5909-6.1185-10.5063"/></svg>
+<span>تحميل لنظام Android (APK)</span>
+</a>
+<a href="#how-it-works" class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-2xl glass-card text-slate-200 font-semibold text-sm border border-slate-700/60 active:scale-95 transition-transform">
+<span>كيف يعمل النظام؟</span>
+</a>
+</div>
+
+<!-- INTERACTIVE MOBILE PHONE SCREEN MOCKUP -->
+
+احمد:
+<div class="relative pt-8 pb-4">
+<!-- Phone Frame -->
+<div class="relative mx-auto w-full max-w-[310px] sm:max-w-[330px] rounded-[42px] p-3.5 bg-gradient-to-b from-slate-700 to-slate-900 border-4 border-slate-700/60 shadow-2xl shadow-cyan-950/60">
+
+<!-- Dynamic Island / Speaker Notch -->
+<div class="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-30 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-700"></div>
+</div>
+
+<!-- Inner Screen -->
+<div class="relative w-full rounded-[30px] bg-[#0c101c] border border-slate-800 p-3 pt-8 overflow-hidden text-right space-y-3">
+
+<!-- Mini App Header inside screen -->
+<div class="flex items-center justify-between border-b border-slate-800/80 pb-2.5 px-1">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+<span class="text-[11px] font-bold text-white">BIM-AI Chat</span>
+</div>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800/40 font-mono">
+GPT-4o
+</span>
+</div>
+
+<!-- Card Balance Mini Widget -->
+<div class="bg-gradient-to-r from-indigo-950/60 to-slate-900/90 rounded-xl p-2.5 border border-indigo-500/20 flex justify-between items-center text-xs">
+<span class="text-slate-400 text-[10px]">الرصيد المتبقي:</span>
+<span class="font-extrabold text-cyan-400 font-mono text-sm">8,450 <span class="text-[9px] text-slate-400">نقطة</span></span>
+</div>
+
+<!-- Chat Messages Preview -->
+<div class="space-y-2 py-1">
+<!-- User Message -->
+<div class="flex justify-start">
+<div class="bg-indigo-600/90 text-white text-[11px] py-2 px-3 rounded-2xl rounded-tr-none max-w-[85%] leading-relaxed shadow-sm">
+كيف أقوم بتحسين سرعة استجابة تطبيقي؟
+</div>
+</div>
+<!-- AI Message -->
+<div class="flex justify-end">
+<div class="bg-slate-800/80 text-slate-200 border border-slate-700/60 text-[11px] py-2 px-3 rounded-2xl rounded-tl-none max-w-[90%] leading-relaxed shadow-sm">
+<div class="flex items-center gap-1 text-[9px] text-cyan-400 font-bold mb-1">
+<span>BIM Engine</span>
+<span>•</span>
+<span class="text-emerald-400">تم الخصم: 15 نقطة</span>
+</div>
+يمكنك استخدام Caching وتفعيل ضغط البيانات مع استخدام استدعاءات الـ Streaming الفورية!
+</div>
+</div>
+</div>
+
+<!-- Input Bar Mockup -->
+<div class="pt-2 flex items-center gap-1.5">
+<div class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-2 text-[10px] text-slate-500 text-right">
+
+احمد:
+اكتب رسالتك هنا...
+</div>
+<div class="w-8 h-8 rounded-xl bg-cyan-500 flex items-center justify-center text-white shadow-md shadow-cyan-500/30">
+<svg class="w-3.5 h-3.5 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Floating Interactive Badge 1 -->
+<div class="absolute top-16 -right-2 sm:-right-4 glass-card px-3 py-2 rounded-2xl shadow-xl border border-cyan-500/30 animate-float flex items-center gap-2 text-right">
+<div class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xs">
+💳
+</div>
+<div>
+<div class="text-[9px] text-slate-400">تفعيل فوري</div>
+<div class="text-[11px] font-bold text-white font-mono">BIM-CARD-8X92</div>
+</div>
+</div>
+
+<!-- Floating Interactive Badge 2 -->
+<div class="absolute bottom-6 -left-2 sm:-left-4 glass-card px-3 py-2 rounded-2xl shadow-xl border border-indigo-500/30 animate-float-delayed flex items-center gap-2 text-right">
+<div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+⚡
+</div>
+<div>
+<div class="text-[9px] text-slate-400">دخول سلس</div>
+<div class="text-[11px] font-bold text-white">رمز OTP عبر الجوال</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CARD SHOWCASE SECTION (THE CORE INNOVATION) -->
+<section class="space-y-5">
+<div class="text-right space-y-1">
+<span class="text-xs font-bold text-cyan-400 tracking-wider">نظام الكروت الحصري</span>
+<h2 class="text-2xl font-extrabold text-white">كارد ذكي واحد.. يفتح لك كل النماذج</h2>
+<p class="text-xs text-slate-400 leading-relaxed">
+لا حاجة لدفع اشتراكات شهرية باهظة بالدولار لكل نموذج؛ اشترِ كارد بالرصيد الذي يناسبك واستخدمه متى شئت.
+</p>
+</div>
+
+<!-- Digital Virtual AI Card -->
+<div class="relative w-full rounded-3xl p-5 sm:p-6 overflow-hidden hologram-sheen border border-white/15 shadow-2xl glass-card-interactive">
+<!-- Card Background Pattern -->
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+<div class="relative z-10 space-y-6">
+<!-- Card Top Row -->
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] text-slate-400 block">بطاقة الذكاء الاصطناعي</span>
+<span class="text-base font-black text-white tracking-wider">BIM AI PLATINUM</span>
+</div>
+<!-- Chip -->
+<div class="w-9 h-7 rounded-md bg-gradient-to-tr from-amber-200 to-amber-400 shadow-inner flex items-center justify-center">
+<div class="w-6 h-4 border border-amber-800/40 rounded-sm grid grid-cols-2"></div>
+</div>
+</div>
+
+<!-- Card Code & Credits -->
+<div class="space-y-2 py-1">
+
+احمد:
+<div class="text-xs text-slate-300 font-mono tracking-widest bg-black/30 w-fit px-2.5 py-1 rounded-md border border-white/5">
+SANAD •••• •••• 8X92
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<span class="text-[10px] text-slate-400">الرصيد الكلي: </span>
+<span class="text-lg font-black text-cyan-300 font-mono">10,000</span>
+<span class="text-[10px] text-slate-400">نقطة</span>
+</div>
+<span class="text-[10px] text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">
+كارد فعّال
+</span>
+</div>
+</div>
+
+<!-- Supported Models Inside Card -->
+<div class="border-t border-white/10 pt-3 flex items-center justify-between text-[11px] text-slate-300">
+<span>النماذج المدعومة:</span>
+<div class="flex items-center gap-1.5 font-bold">
+<span class="px-1.5 py-0.5 rounded bg-white/10 text-[10px]">GPT-4o</span>
+<span class="px-1.5 py-0.5 rounded bg-white/10 text-[10px]">Claude 3.5</span>
+<span class="px-1.5 py-0.5 rounded bg-white/10 text-[10px]">Gemini 1.5</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- APP FEATURES (MOBILE GRID) -->
+<section class="space-y-4">
+<div class="text-right">
+<span class="text-xs font-bold text-indigo-400 tracking-wider">المميزات الاستثنائية</span>
+<h2 class="text-2xl font-extrabold text-white">لماذا يفضل الجميع BIM AI؟</h2>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+
+<!-- Feature 1 -->
+<div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-2.5">
+<div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg">
+📱
+</div>
+<h3 class="text-sm font-bold text-white">تسجيل فوري برقم الجوال</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+انسَ كلمات المرور الطويلة؛ ادخل فوراً برمز تحقق OTP على هاتفك خلال ثوانٍ معدودة.
+</p>
+</div>
+
+<!-- Feature 2 -->
+<div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-2.5">
+<div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg">
+🔒
+</div>
+<h3 class="text-sm font-bold text-white">أمان وحماية تامة</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+مفاتيح الـ AI محمية بأعلى درجات التشفير في السيرفر، مع إدارة حازمة تمنع استنزاف الرصيد.
+</p>
+</div>
+
+<!-- Feature 3 -->
+<div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-2.5">
+<div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg">
+⚡
+</div>
+<h3 class="text-sm font-bold text-white">استجابة فائقة السرعة</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+كتابة حية ومباشرة للردود بنظام Streaming السلس المصمم خصيصاً لتطبيقات Flutter.
+</p>
+</div>
+
+احمد:
+<!-- Feature 4 -->
+<div class="glass-card p-4 rounded-2xl border border-slate-800 space-y-2.5">
+<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+📊
+</div>
+<h3 class="text-sm font-bold text-white">شفافية استهلاك الرصيد</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+سجل حركات دقيق يوضح كل رسالة، والموديل المستخدم، وكمية النقاط المخصومة منها.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- HOW IT WORKS (STEP-BY-STEP) -->
+<section id="how-it-works" class="space-y-4">
+<div class="text-right">
+<span class="text-xs font-bold text-cyan-400 tracking-wider">خطوات بسيطة</span>
+<h2 class="text-2xl font-extrabold text-white">3 خطوات فقط للانطلاق</h2>
+</div>
+
+<div class="space-y-3">
+
+<div class="glass-card p-4 rounded-2xl flex items-center gap-3.5 border border-slate-800">
+<div class="w-9 h-9 shrink-0 rounded-xl bg-slate-800 font-mono font-black text-cyan-400 flex items-center justify-center text-sm border border-slate-700">
+01
+</div>
+<div>
+<h4 class="text-xs font-bold text-white">حمّل التطبيق وسجّل برقمك</h4>
+<p class="text-[11px] text-slate-400">ستصلك رسالة OTP سريعة لتأكيد حسابك بدون تعقيد.</p>
+</div>
+</div>
+
+<div class="glass-card p-4 rounded-2xl flex items-center gap-3.5 border border-slate-800">
+<div class="w-9 h-9 shrink-0 rounded-xl bg-slate-800 font-mono font-black text-cyan-400 flex items-center justify-center text-sm border border-slate-700">
+02
+</div>
+<div>
+<h4 class="text-xs font-bold text-white">اشحن كارد الرصيد الخاص بك</h4>
+<p class="text-[11px] text-slate-400">أدخل كود الكارد ليتم تفعيل رصيد النقاط والنماذج المتاحة فوراً.</p>
+</div>
+</div>
+
+<div class="glass-card p-4 rounded-2xl flex items-center gap-3.5 border border-slate-800">
+<div class="w-9 h-9 shrink-0 rounded-xl bg-slate-800 font-mono font-black text-cyan-400 flex items-center justify-center text-sm border border-slate-700">
+03
+</div>
+<div>
+<h4 class="text-xs font-bold text-white">ابدأ المحادثة مع أقوى الموديلات</h4>
+<p class="text-[11px] text-slate-400">اختر GPT-4o أو Claude واستمتع بإجابات فورية ذكية.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- DOWNLOAD CTA SECTION -->
+<section id="download" class="glass-card p-6 sm:p-8 rounded-3xl border border-cyan-500/30 text-center space-y-5 relative overflow-hidden">
+<div class="ambient-glow bg-cyan-500/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+<div class="relative z-10 space-y-2">
+<span class="inline-block text-[11px] font-bold text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800/40">
+إصدار مجاني متاح الآن
+</span>
+<h3 class="text-2xl font-black text-white">جاهز لتجربة ذكاء اصطناعي مختلفة؟</h3>
+<p class="text-xs text-slate-300 max-w-xs mx-auto leading-relaxed">
+حمّل التطبيق الآن واشحن كاردك الأول واستمتع بأقوى أدوات الذكاء الاصطناعي بين يديك.
+</p>
+</div>
+
+احمد:
+<!-- Download Buttons -->
+<div class="relative z-10 flex flex-col gap-2.5 pt-2">
+<button class="w-full py-3.5 px-4 rounded-2xl bg-white text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 shadow-xl hover:bg-slate-100 active:scale-95 transition-all">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0003s.4482-1.0003.9993-1.0003c.552 0 1.0002.4486 1.0002 1.0003s-.4482 1.0003-1.0002 1.0003m-11.046 0c-.552 0-1.0002-.4486-1.0002-1.0003s.4482-1.0003 1.0002-1.0003c.5511 0 .9993.4486.9993 1.0003s-.4482 1.0003-.9993 1.0003m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1523-.5676.416.416 0 00-.5682.1523l-2.0223 3.503c-1.6373-.748-3.4776-1.1627-5.436-1.1627-1.9583 0-3.7986.4147-5.436 1.1627l-2.0222-3.503a.416.416 0 00-.5682-.1523.416.416 0 00-.1524.5676l1.9974 3.4592C4.388 11.2368 2 15.2285 2 19.8277h20c0-4.5992-2.388-8.5909-6.1185-10.5063"/></svg>
+<span>تحميل بصيغة APK مباشرة</span>
+</button>
+
+<button class="w-full py-3.5 px-4 rounded-2xl bg-slate-900 border border-slate-700 text-slate-300 font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all opacity-80 cursor-not-allowed">
+<svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 7.18c.63-.78 1.06-1.86.94-2.94-.92.04-2.02.62-2.67 1.39-.58.68-1.08 1.78-.95 2.84 1.03.08 2.05-.51 2.68-1.29z"/></svg>
+<span>قريباً على App Store (iOS)</span>
+</button>
+</div>
+</section>
+
+<!-- INTERACTIVE FAQ ACCORDION -->
+<section class="space-y-4">
+<div class="text-right">
+<span class="text-xs font-bold text-purple-400 tracking-wider">الأسئلة الشائعة</span>
+<h2 class="text-2xl font-extrabold text-white">كل ما تريد معرفته</h2>
+</div>
+
+<div class="space-y-2.5 pt-1" id="faq-container">
+<!-- FAQ Item 1 -->
+<div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+<button class="w-full p-4 text-right flex justify-between items-center text-xs font-bold text-white focus:outline-none" onclick="toggleFaq(this)">
+<span>كيف أحصل على كود الكارد لشحن الرصيد؟</span>
+<span class="text-cyan-400 transition-transform duration-200">+</span>
+</button>
+<div class="px-4 pb-4 text-[11px] text-slate-400 leading-relaxed hidden">
+يمكنك الحصول على كروت BIM AI من خلال الموزعين المعتمدين أو عبر الشراء المباشر الإلكتروني، ويحتوي كل كارد على كود فريد يتم إدخاله في التطبيق للشحن الفوري.
+</div>
+</div>
+
+<!-- FAQ Item 2 -->
+<div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+<button class="w-full p-4 text-right flex justify-between items-center text-xs font-bold text-white focus:outline-none" onclick="toggleFaq(this)">
+<span>هل ينتهي رصيد الكارد إذا لم أستخدمه؟</span>
+<span class="text-cyan-400 transition-transform duration-200">+</span>
+</button>
+<div class="px-4 pb-4 text-[11px] text-slate-400 leading-relaxed hidden">
+لكل كارد تاريخ صلاحية محدد وواضح يظهر في واجهة التطبيق، ويمكنك استهلاك النقاط بحرية تامة طوال فترة سريان الكارد.
+</div>
+</div>
+
+احمد:
+<!-- FAQ Item 3 -->
+<div class="glass-card rounded-2xl border border-slate-800 overflow-hidden">
+<button class="w-full p-4 text-right flex justify-between items-center text-xs font-bold text-white focus:outline-none" onclick="toggleFaq(this)">
+<span>هل يحتاج التطبيق إلى VPN للعمل؟</span>
+<span class="text-cyan-400 transition-transform duration-200">+</span>
+</button>
+<div class="px-4 pb-4 text-[11px] text-slate-400 leading-relaxed hidden">
+لا، التطبيق يتصل مباشرة بخوادمنا الآمنة التي تتولى الاتصال بكافة مزودي الذكاء الاصطناعي دون الحاجة لأي تطبيق VPN.
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- MOBILE-FIRST FOOTER -->
+<footer class="border-t border-slate-900 bg-[#05070a] py-8 px-4 text-center text-slate-500 text-xs space-y-3">
+<div class="flex items-center justify-center gap-2">
+<div class="w-6 h-6 rounded-lg bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white text-[10px] font-black">
+B
+</div>
+<span class="text-slate-300 font-bold">BIM AI Application</span>
+</div>
+<p class="text-[11px] text-slate-400">
+الحل الأذكى والأنسب لاستخدام أدوات الذكاء الاصطناعي المتطورة بدون بطاقات بنكية دولية.
+</p>
+<div class="text-[10px] text-slate-400 pt-2 border-t border-slate-900">
+جميع الحقوق محفوظة &copy; 2026 BIM AI
+</div>
+</footer>
+
+<!-- Interactive JS for Accordion -->
+<script>
+function toggleFaq(button) {
+const content = button.nextElementSibling;
+const icon = button.querySelector('span:last-child');
+
+const isOpen = !content.classList.contains('hidden');
+
+// Close all
+document.querySelectorAll('#faq-container div > div').forEach(el => el.classList.add('hidden'));
+document.querySelectorAll('#faq-container button span:last-child').forEach(el => el.textContent = '+');
+
+if (!isOpen) {
+content.classList.remove('hidden');
+icon.textContent = '−';
+}
+}
+</script>
+</body>
+</html>
